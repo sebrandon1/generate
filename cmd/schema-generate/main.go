@@ -8,7 +8,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/a-h/generate"
+	"github.com/sebrandon1/generate"
 )
 
 var (
@@ -40,7 +40,7 @@ func main() {
 
 	schemas, err := generate.ReadInputFiles(inputFiles, *schemaKeyRequiredFlag)
 	if err != nil {
-		fmt.Fprintf(os.Stderr, err.Error())
+		fmt.Fprintf(os.Stderr, "Error reading input files: %v\n", err)
 		os.Exit(1)
 	}
 

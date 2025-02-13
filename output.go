@@ -230,7 +230,7 @@ func (strct *%s) UnmarshalJSON(b []byte) error {
 			// all unknown properties are not allowed
 			imports["fmt"] = true
 			fmt.Fprintf(w, `        default:
-            return fmt.Errorf("additional property not allowed: \"" + k + "\"")
+            return fmt.Errorf("additional property not allowed: \"%%s\"", k)
 `)
 		} else {
 			fmt.Fprintf(w, `        default:
