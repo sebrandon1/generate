@@ -92,5 +92,3 @@ type Status struct {
   Favouritecat string `json:"favouritecat,omitempty"`
 }
 ```
-
-See the [test/](./test/) directory for more examples.

@@ -39,16 +39,7 @@ test: $(BIN) $(GENERATED_SOURCE)
 codecheck: fmt lint vet
 
 fmt:
-	@echo "+ go fmt"
 	go fmt $(PKG)/...
 
-lint: $(GOPATH)/bin/golint
-	@echo "+ go lint"
-	golint -min_confidence=0.1 $(PKG)/...
-
-$(GOPATH)/bin/golint:
-	go get -v golang.org/x/lint/golint
-
 vet:
-	@echo "+ go vet"
 	go vet $(PKG)/...
